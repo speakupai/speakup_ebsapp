@@ -15,11 +15,15 @@ from utils.hparams import hparams as hp
 
 def inference(audio_clip):
     original_file = audio_clip
-    save_dir = '/home/taimur/Documents/Online Courses/Fourth Brain/Projects/Audio_super_res/ml_deployment/uploads'
-    checkpoint_path = '/home/taimur/Documents/Online Courses/Fourth Brain/Projects/Audio_super_res/ml_deployment/saved_model/latest_checkpoint.pt'
-    #default_inf_device = 'cpu',
+    save_dir = './uploads'
+    checkpoint_path = './saved_model/latest_checkpoint.pt'
 
-    #choices=['cpu'] + [f'cuda:{d}' for d in range(torch.cuda.device_count())], type=str,
+    if torch.cuda.is_avaialbe() == True:
+        default_inf_device = torch.cuda.device(0)
+    else:
+        default_inf_device = 'cpu',
+
+    
 
     # Load checkpoint
     checkpoint = torch.load(checkpoint_path, map_location=torch.device('cpu'))
