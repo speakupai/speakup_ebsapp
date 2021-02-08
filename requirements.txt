@@ -1,0 +1,5 @@
+librosa==0.8
+pytorch=1.15
+numpy
+fastapi
+matplotlib
