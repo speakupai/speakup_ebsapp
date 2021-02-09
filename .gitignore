@@ -10,7 +10,7 @@
 *.py[cod]
 
 # Unit test reports
-TEST*.xml
+TEST.xml
 
 # Applications
 *.app
