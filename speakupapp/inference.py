@@ -43,7 +43,7 @@ def inference(audio_clip):
             filename = os.path.splitext(os.path.split(file)[1])[0]
             x, _ = librosa.load(file, sr=hp.dsp.sample_rate, mono=True)
             target_length = len(x)
-            x = torch.tensor(x).to('cpu')
+            x = torch.tensor(x).to(default_inf_device)
             x = data.preprocess_inference_data(x,
                                             hp.inference.batched,
                                             hp.inference.batch_size,
