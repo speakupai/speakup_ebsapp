@@ -12,18 +12,15 @@ from models.wavenet import WaveNet
 
 from utils.hparams import hparams as hp
 
-
 def inference(audio_clip):
     original_file = audio_clip
     save_dir = './uploads'
     checkpoint_path = './saved_model/latest_checkpoint.pt'
 
-    if torch.cuda.is_avaialbe() == True:
+    if torch.cuda.is_available() == True:
         default_inf_device = torch.cuda.device(0)
     else:
         default_inf_device = 'cpu',
-
-    
 
     # Load checkpoint
     checkpoint = torch.load(checkpoint_path, map_location=torch.device('cpu'))

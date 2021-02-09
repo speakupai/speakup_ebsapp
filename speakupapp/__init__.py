@@ -1,10 +1,5 @@
-from typing import Mapping
-
 from fastapi import FastAPI
+import uvicorn
 
-def create_app():
-    app=FastAPI()
-
-    with app.add_route():
-        from . import main
-        return app
+if __name__ == '__main__':
+    uvicorn.run('main:app', host='127.0.0.1', port=8000, reload = True)
