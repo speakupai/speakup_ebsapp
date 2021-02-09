@@ -1,4 +1,5 @@
 from typing import Mapping
+
 from fastapi import FastAPI
 
 def create_app():
