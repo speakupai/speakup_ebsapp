@@ -6,12 +6,10 @@ Pillow==8.1.0
 pydantic==1.7.3
 pypesq==1.2.4
 pystoi==0.3.3
-SoundFile==0.10.3.post1
+SoundFile==0.10.3
 starlette==0.13.6
 torch==1.7.1
 torchaudio==0.7.2
-tornado==6.1
 tqdm==4.47.0
 uvicorn==0.13.3
-websockets==8.1
 Werkzeug==1.0.1
