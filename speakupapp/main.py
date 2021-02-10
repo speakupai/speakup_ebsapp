@@ -48,7 +48,7 @@ async def create_upload_file(request:Request,
     create_spectrogram(p, value='_orig')
     
     #  run inference
-    inference(p)
+    #inference(p)
     create_spectrogram(p_new, value='_clean')
     
     #return StreamingResponse(spect, media_type='image/png')
